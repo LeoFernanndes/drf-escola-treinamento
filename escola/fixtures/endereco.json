@@ -1,0 +1,44 @@
+[
+  {
+    "model": "core.endereco",
+    "pk": 1,
+    "fields": {
+      "logradouro": "Avenida",
+      "endereco": "Paulista",
+      "numero": 1301,
+      "complemento": "",
+      "cep": "00000-000",
+      "bairro": "Centro",
+      "cidade": "São Paulo",
+      "estado": "SP"
+    }
+  },
+  {
+    "model": "core.endereco",
+    "pk": 2,
+    "fields": {
+      "logradouro": "Rua",
+      "endereco": "XV de novembro",
+      "numero": 32,
+      "complemento": "sala 11",
+      "cep": "00000-000",
+      "bairro": "Alto da XV",
+      "cidade": "Curitiba",
+      "estado": "PR"
+    }
+  },
+  {
+    "model": "core.endereco",
+    "pk": 3,
+    "fields": {
+      "logradouro": "Avenida",
+      "endereco": "7 de setembro",
+      "numero": 1034,
+      "complemento": "",
+      "cep": "00000-000",
+      "bairro": "Centro",
+      "cidade": "Guarulhos",
+      "estado": "SP"
+    }
+  }
+]

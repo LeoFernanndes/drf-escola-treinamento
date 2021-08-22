@@ -1,0 +1,26 @@
+[
+  {
+    "model": "escola.escola",
+    "pk": 1,
+    "fields": {
+      "nome": "string",
+      "endereco": 1
+    }
+  },
+  {
+    "model": "escola.escola",
+    "pk": 2,
+    "fields": {
+      "nome": "string",
+      "endereco": 2
+    }
+  },
+  {
+    "model": "escola.escola",
+    "pk": 3,
+    "fields": {
+      "nome": "string",
+      "endereco": 3
+    }
+  }
+]
