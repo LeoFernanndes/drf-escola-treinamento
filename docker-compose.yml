@@ -1,0 +1,50 @@
+version: '3'
+
+services:
+  database:
+    image: postgres
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432
+    networks:
+      - nginx_network
+    volumes:
+      - ./database/postgres-data/:/var/lib/postgresql/data
+
+  api:
+    build:
+      context: ./api/
+      dockerfile: Dockerfile
+    volumes:
+      - ./api/:/usr/src/app/
+      - ./static-drf-escola-treinamento/:/usr/src/app/static/
+    ports:
+      - 8000
+    deploy:
+      replicas: 1
+    networks:
+      - nginx_network
+    depends_on:
+      - database
+
+  nginx:
+    image: nginx:1.15-alpine
+    restart: unless-stopped
+    volumes:
+      - ./nginx/conf.d/:/etc/nginx/conf.d
+      - ./nginx/logs/:/var/log/nginx/
+      - ./static-drf-escola-treinamento/:/usr/src/app/static-drf-escola-treinamento/
+    ports:
+      - 80:80
+    networks:
+      - nginx_network
+    depends_on:
+      - api
+
+networks:
+  nginx_network:
+    driver: bridge
+

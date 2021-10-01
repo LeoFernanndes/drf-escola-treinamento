@@ -1,5 +1,12 @@
-venv
+../venv
 .idea
-db.sqlite3
+api/db.sqlite3
 */__pycache__
 __pycache__
+api/nginx/logs
+*/venv
+venv
+*/.env
+.env
+static-drf-escola-treinamento
+*/postgres-data
